@@ -1,0 +1,56 @@
+#menu {
+	background-color: #375a7f;
+	border-radius: 0;
+	border: 0;
+	margin-bottom:0;
+}
+
+.container {
+	margin-left: 15px;
+	margin-right: 0px;
+}
+
+.press {
+	color: #66CDAA !important;
+	background: gray !important;
+}
+
+
+a#login {
+	position: relative;
+	font-size: 15px;
+	left: -7px;
+	color: white;
+}
+
+#link {
+	text-decoration: none;
+}
+
+#navItem {
+	color: #ffffff;
+	font-size: 15px;
+	margin: 0px;
+}
+
+#navItem:hover {
+	background: #28415b;
+}
+
+#navItem:focus {
+	color: #66CDAA;
+}
+
+#navItem:active {
+	color: #66CDAA;
+}
+
+#iconHome{
+	color: #ffffff;
+	font-size: 16px;
+}
+
+#iconHome:hover {
+	color: #66CDAA;
+	text-decoration: none;
+}
