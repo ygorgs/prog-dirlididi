@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import Menu from "./menu/menu";
 
-export default class App extends Component {
+export default class Courses extends Component {
   render() {
     return (
       <div>
-        <Menu/>
+        Courses
       </div>
-    );
+    )
   }
 }

@@ -1,28 +1,34 @@
 {
   "name": "dirlididi",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "platform to learn about code challenges.",
   "main": "index.js",
   "repository": "https://github.com/matheusgr/prog-dirlididi.git",
-  "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors"
-  },
-  "devDependencies": {
-    "babel-core": "^6.2.1",
-    "babel-loader": "^6.2.0",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
-  },
+  "private": true,
   "dependencies": {
-    "babel-preset-stage-1": "^6.1.18",
-    "jquery": "^3.3.1",
-    "lodash": "^3.10.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-redux": "5.0.7",
-    "redux": "4.0.0"
+    "bootstrap": "^3.3.7",
+    "react": "^16.6.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.6.0",
+    "react-form": "^3.5.6",
+    "react-scripts": "2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "react-router-dom": "^4.3.1"
   }
 }
