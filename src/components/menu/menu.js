@@ -1,15 +1,32 @@
 import React, { Component } from 'react';
 import './style/nav-bar.css';
-import NavItemMenu from './nav-item-menu.js';
-import {Nav, Navbar} from "react-bootstrap";
+import {Nav, Navbar, NavItem} from "react-bootstrap";
+import Router from "../../config/router";
+import {Link} from "react-router-dom";
+
+const menuItems = {courses: "Courses", problems: "Problems", ide: "Ide"};
 
 class Menu extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      activated: ''
+    };
   }
 
+  handleSelect = (selectedKey) => {
+    this.setState({activated: selectedKey})
+  };
+
   render() {
+    const navItems = Object.keys(menuItems).map((key) =>{
+      return(
+        <NavItem componentClass='span' id='navItem' active={key === this.state.activated} key={key} eventKey={key}>
+          <Link id='link' to={"/"+key}> {menuItems[key]} </Link>
+        </NavItem>
+      )
+    });
+
     return (
       <div>
         <Navbar id='menu'>
@@ -24,15 +41,14 @@ class Menu extends Component {
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
-            <Nav>
-              <NavItemMenu toLink='courses' name='Courses' eventKey={1} />
-              <NavItemMenu toLink='problems' name='Problems' eventKey={2} />
-              <NavItemMenu toLink='ide' name='IDE' eventKey={3} />
+          <Navbar.Collapse >
+            <Nav pullRight onSelect={key => this.handleSelect(key)} >
+              {navItems}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </div>
+        <Router/>
+        </div>
     );
   }
 }

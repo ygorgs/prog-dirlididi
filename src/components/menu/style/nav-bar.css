@@ -1,20 +1,26 @@
+.container {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.navbar-default .navbar-nav > .active > span {
+	background-color: #28415b;
+}
+
+.navbar-nav span[role=button] {
+	display: inline-block;
+	line-height: 20px;
+}
+
 #menu {
 	background-color: #375a7f;
 	border-radius: 0;
 	border: 0;
 	margin-bottom:0;
 }
-
-.container {
-	margin-left: 15px;
-	margin-right: 0px;
-}
-
-.press {
-	color: #66CDAA !important;
-	background: gray !important;
-}
-
 
 a#login {
 	position: relative;
@@ -24,26 +30,21 @@ a#login {
 }
 
 #link {
+	color: #ffffff;
+	padding: 15px;
+	display: inline-block;
 	text-decoration: none;
 }
 
 #navItem {
-	color: #ffffff;
 	font-size: 15px;
 	margin: 0px;
 }
 
 #navItem:hover {
-	background: #28415b;
+	background-color: #28415b;
 }
 
-#navItem:focus {
-	color: #66CDAA;
-}
-
-#navItem:active {
-	color: #66CDAA;
-}
 
 #iconHome{
 	color: #ffffff;
