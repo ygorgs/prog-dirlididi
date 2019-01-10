@@ -4,7 +4,6 @@ import * as problemAction from "../../actions/problem";
 import Table from '../../components/utils/table'
 import './style/problems.css';
 
-
 class Problems extends Component {
   constructor(props) {
     super(props);
