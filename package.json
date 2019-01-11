@@ -4,6 +4,7 @@
   "description": "platform to learn about code challenges.",
   "main": "index.js",
   "repository": "https://github.com/matheusgr/prog-dirlididi.git",
+  "proxy": "http://dirlididi.com",
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
