@@ -1,0 +1,5 @@
+export const INIT_PROBLEMS = 'INIT_PROBLEMS';
+export const CREATE_PROBLEM = 'CREATE_PROBLEM';
+export const DELETE_PROBLEM = 'DELETE_PROBLEM';
+export const UPDATE_PROBLEM = 'UPDATE_PROBLEM';
+export const CREATE_FAIL = 'CREATE_FAIL';
