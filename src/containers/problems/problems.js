@@ -5,20 +5,13 @@ import Table from '../../components/utils/table'
 import './style/problems.css';
 
 class Problems extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      problems: []
-    }
-  }
-
   render() {
     const headers = {
       name: 'Problem',
       description: 'Description',
       key: 'Key',
-      created: 'Created',
-      solved: 'Solved'
+      date: 'Created',
+      solved: 'Solved' // check how we're going to deal with solving
     };
 
     if (this.props.isLoading) {
@@ -28,7 +21,7 @@ class Problems extends Component {
     console.log(this.props.problems);
     return(
       <div className='problems-container'>
-        <Table headers={headers} data={this.state.problems}/>
+        <Table headers={headers} data={this.props.problems}/>
       </div>
     )
   }

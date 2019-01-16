@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+import './style/table.css'
 
 const options = {
   onRowClick: function(row) {
     // Add modal here
     console.log('clicked')
   }
-}
-
-const headerStyle = {
-  borderCollapse: 'collapse',
-  backgroundColor: '#010000',
-  color: '#FEFEFE'
 }
 
 class Table extends Component {
@@ -38,7 +33,6 @@ class Table extends Component {
       <div>
         <BootstrapTable
           data={ this.state.data }
-          headerStyle={ headerStyle }
           options={ options }
           search={ true }
           keyField='dirlididi-table'
