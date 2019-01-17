@@ -3,3 +3,5 @@ export const CREATE_PROBLEM = 'CREATE_PROBLEM';
 export const DELETE_PROBLEM = 'DELETE_PROBLEM';
 export const UPDATE_PROBLEM = 'UPDATE_PROBLEM';
 export const CREATE_FAIL = 'CREATE_FAIL';
+
+export const GET_COURSES = 'GET_COURSES';

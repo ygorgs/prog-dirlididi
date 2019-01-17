@@ -18,7 +18,6 @@ class Problems extends Component {
       return (<div className="spinner"/>)
     }
 
-    console.log(this.props.problems);
     return(
       <div className='problems-container'>
         <Table headers={headers} data={this.props.problems}/>
