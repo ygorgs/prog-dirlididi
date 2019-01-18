@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
-import * as problemAction from "../../actions/problem";
+import * as problemAction from "../../actions/problem-action";
 import Table from '../../components/utils/table'
-import './style/problems.css';
+import './style/problem.css';
 
-class Problems extends Component {
+class Problem extends Component {
   render() {
     const headers = {
       name: 'Problem',
@@ -39,8 +39,8 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = dispatch => (
   {
-    onInitProblems: () => dispatch(problemAction.initProblems()),
+    onInitProblems: () => dispatch(problemAction.getProblems()),
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Problems)
+export default connect(mapStateToProps, mapDispatchToProps)(Problem)

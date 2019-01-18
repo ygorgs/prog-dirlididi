@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './style/nav-bar.css';
 import {Nav, Navbar, NavItem} from "react-bootstrap";
 import Router from "../../config/router";
 import {Link} from "react-router-dom";
+import './style/menu.css';
 
 const menuItems = {courses: "Courses", problems: "Problems", ide: "Ide"};
 
