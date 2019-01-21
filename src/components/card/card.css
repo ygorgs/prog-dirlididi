@@ -1,0 +1,22 @@
+.card {
+    padding: 0;
+    margin: 10px;
+    float: left;
+    width: 300px;
+    min-height: 120px;
+ }
+
+.card-title {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Montserrat, sans-serif;
+    color: black;
+}
+
+.card-description{
+    color: #868e96;
+    line-height: 1.75;
+}
+
