@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
-import './table.css'
+import './table.css';
 
 const options = {
-  onRowClick: function(row) {
+  onRowClick: function (row) {
     // Add modal here
-    console.log('clicked')
+    console.log('clicked');
   }
-}
+};
 
 class Table extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     this.state = {
       headers: props.headers,
-      data: props.data,
-    }
+      data: props.data
+    };
   }
 
-  render() {
+  render () {
     const headers = Object.keys(this.state.headers).map((key) => {
-      return(
+      return (
         <TableHeaderColumn dataField={key}>
           { this.state.headers[key] }
         </TableHeaderColumn>
@@ -32,9 +32,9 @@ class Table extends Component {
     return (
       <div>
         <BootstrapTable
-          data={ this.state.data }
-          options={ options }
-          search={ true }
+          data={this.state.data}
+          options={options}
+          search
           keyField='dirlididi-table'
           pagination
           hover

@@ -1,34 +1,34 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import "./header.css"
-import {Button} from "react-bootstrap";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './header.css';
+import { Button } from 'react-bootstrap';
 
 export default class Header extends Component {
-  render() {
+  render () {
     const headerStyle = {
       backgroundImage: `url(${this.props.backgroundImage})`,
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-      backgroundPosition: "50%",
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover',
+      backgroundPosition: '50%'
     };
 
     return (
-      <header className="header" style={headerStyle}>
-        <div className="header-body">
-          <div className="header-title">
+      <header className='header' style={headerStyle}>
+        <div className='header-body'>
+          <div className='header-title'>
             <span>
               <em>{this.props.firstTitle}</em>
-              <br/>
+              <br />
               <em>{this.props.secondTitle}</em>
             </span>
           </div>
           {this.props.children}
           <p>
-            <Button bsStyle="primary" href={`#${this.props.buttonToggle}`} className={"btn btn-primary btn-xl"}> {this.props.buttonTitle} </Button>
+            <Button bsStyle='primary' href={`#${this.props.buttonToggle}`} className={'btn btn-primary btn-xl'}> {this.props.buttonTitle} </Button>
           </p>
         </div>
       </header>
-    )
+    );
   }
 }
 

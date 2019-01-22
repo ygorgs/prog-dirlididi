@@ -1,7 +1,7 @@
 export const fetchGet = (endpoint) => {
   return window.fetch(endpoint)
     .then(response => response.json())
-    .catch(error => console.log(error))
+    .catch(error => console.log(error));
 };
 
 export const fetchPost = (endpoint, body) => {
@@ -13,7 +13,7 @@ export const fetchPost = (endpoint, body) => {
     },
     body: JSON.stringify(body)
   }).then(response => response.json())
-    .catch(error => console.log(error))
+    .catch(error => console.log(error));
 };
 
 export const fetchDelete = (endpoint) => (
@@ -32,5 +32,5 @@ export const fetchPut = (endpoint, body) => {
     },
     body: JSON.stringify(body)
   }).then(response => response.json())
-    .catch(error => console.log(error))
+    .catch(error => console.log(error));
 };

@@ -14,8 +14,7 @@ const ProblemReducer = (state = initialState, action) => {
         isLoading: false,
         problems: action.problems
       };
-    default: return state
-
+    default: return state;
   }
 };
 

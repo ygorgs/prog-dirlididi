@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 export default class Ide extends Component {
-  render() {
+  render () {
     return (
       <div>
         IDE
       </div>
-    )
+    );
   }
 }
