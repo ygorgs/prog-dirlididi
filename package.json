@@ -24,7 +24,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "semistandard",
+    "lint-fix": "semistandard --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +37,7 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {}
+  "devDependencies": {
+    "semistandard": "^13.0.1"
+  }
 }
