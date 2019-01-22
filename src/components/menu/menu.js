@@ -14,7 +14,7 @@ class Menu extends Component {
     };
   }
 
-  static handleSelect = (selectedKey) => {
+  handleSelect = (selectedKey) => {
     this.setState({ activated: selectedKey });
   };
 
