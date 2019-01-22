@@ -1,4 +1,4 @@
-import * as actionTypes from "../actions/actions";
+import * as actionTypes from '../actions/actions';
 
 const initialState = {
   data: null,
@@ -14,7 +14,7 @@ const WelcomeReducer = (state = initialState, action) => {
         isLoading: false,
         data: action.data
       };
-    default: return state
+    default: return state;
   }
 };
 
