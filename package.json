@@ -41,7 +41,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^9.0.0",
     "semistandard": "^13.0.1"
   }
 }
