@@ -1,0 +1,42 @@
+.navbar-default .navbar-nav > .active > span {
+    background-color: #28415b;
+}
+
+.navbar-default .navbar-nav > .active > span > a {
+    color: white !important;
+}
+
+.navbar-nav span[role=button] {
+    display: inline-block;
+    line-height: 20px;
+}
+
+.menu {
+    background-color: #375a7f;
+    border-radius: 0;
+    border: 0;
+    margin-bottom:0;
+}
+
+.navbar-nav > li > span > a{
+    color: hsla(0,0%,100%,.5);
+    padding: 15px;
+    font-size: 15px;
+    margin:0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.navbar-nav > li > span > a:hover {
+    color: white !important;
+}
+
+.menu-logo{
+    color: #ffffff;
+    font-family: Kaushan Script, sans-serif;
+    font-size: 25px;
+}
+
+.menu-logo:hover {
+    color: #66CDAA;
+}
