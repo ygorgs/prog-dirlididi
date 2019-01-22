@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import * as problemAction from "../../actions/problem";
-import Table from '../../components/utils/table'
+import Table from '../../components/table/table'
 import './style/problems.css';
+import Spinner from "../../components/spinner/spinner";
 
 class Problems extends Component {
   render() {
@@ -15,10 +16,9 @@ class Problems extends Component {
     };
 
     if (this.props.isLoading) {
-      return (<div className="spinner"/>)
+      return <Spinner/>
     }
 
-    console.log(this.props.problems);
     return(
       <div className='problems-container'>
         <Table headers={headers} data={this.props.problems}/>

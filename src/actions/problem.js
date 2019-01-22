@@ -1,9 +1,9 @@
-import * as action from './actions';
-import { fetchGet, fetchDelete, fetchPost, fetchPut} from '../shared/utility'
+import * as action from "./actions";
+import { fetchGet, fetchDelete, fetchPost, fetchPut} from "../shared/utility"
 
 export const createProblem = (problem) => {
   return dispatch => (
-    fetchPost(`/api/problem`, problem)
+    fetchPost(`/problem`, problem)
       .then(problem => {
         if (problem.error) {
           dispatch(createFail(problem.error))
@@ -19,7 +19,7 @@ export const createProblem = (problem) => {
 
 export const updateProblem = (problemId, body) => {
   return  dispatch => {
-    fetchPut(`/api/problem/${problemId}`, body)
+    fetchPut(`/problem/${problemId}`, body)
       .then(problem => {
         dispatch({ type: action.UPDATE_PROBLEM, problem: problem });
       })
@@ -32,7 +32,7 @@ export const updateProblem = (problemId, body) => {
 
 export const deleteProblem = (problemId) => {
   return dispatch => (
-    fetchDelete(`/api/problem/${problemId.join(',')}`)
+    fetchDelete(`/problem/${problemId.join(",")}`)
       .then(dispatch({ type: action.DELETE_PROBLEM, problemID: problemId }))
       .catch(error =>{
         console.log(error)
@@ -42,7 +42,7 @@ export const deleteProblem = (problemId) => {
 
 export const initProblems = () => {
   return  dispatch => {
-    fetchGet('/api/problem')
+    fetchGet("/problem")
       .then(problems => {
         dispatch({ type: action.INIT_PROBLEMS, problems: problems });
       })
