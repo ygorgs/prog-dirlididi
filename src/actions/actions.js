@@ -2,6 +2,11 @@ export const INIT_PROBLEMS = 'INIT_PROBLEMS';
 export const CREATE_PROBLEM = 'CREATE_PROBLEM';
 export const DELETE_PROBLEM = 'DELETE_PROBLEM';
 export const UPDATE_PROBLEM = 'UPDATE_PROBLEM';
-export const CREATE_FAIL = 'CREATE_FAIL';
 
 export const GET_COURSES = 'GET_COURSES';
+export const GET_COURSE_BY_ID = 'GET_COURSE_BY_ID';
+export const CREATE_COURSE = 'CREATE_COURSE';
+export const UPDATE_COURSE = 'UPDATE_COURSE';
+export const DELETE_COURSE = 'DELETE_COURSE';
+
+export const CREATE_FAIL = 'CREATE_FAIL';
