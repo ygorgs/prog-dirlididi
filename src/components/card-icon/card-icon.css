@@ -1,23 +1,21 @@
 .card-icon {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .card-icon-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: Montserrat, sans-serif;
-    color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Montserrat, sans-serif;
+  color: black;
 }
 
 .text-primary {
-    color: #375a7f!important;
+  color: #375a7f !important;
 }
 
-
-.card-icon-description{
-    color: #868e96;
-    line-height: 1.75;
+.card-icon-description {
+  color: #868e96;
+  line-height: 1.75;
 }
-
