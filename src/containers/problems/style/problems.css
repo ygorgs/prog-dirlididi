@@ -1,5 +1,9 @@
 .problems-container {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+#add-problem-form {
+  margin: 2% 5% 0;
 }

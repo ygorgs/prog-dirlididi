@@ -5,3 +5,7 @@ export const HEADERS_TABLE = {
   created: { label: 'Created', width: '250' },
   solved: { label: 'Solved', width: '80' } // check how we're going to deal with solving
 };
+
+export const URLS = {
+  addProblem: '/addProblem'
+};

@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import { Button, PageHeader } from 'react-bootstrap';
 import { connect } from 'react-redux';
+
+import { HEADERS_TABLE, URLS } from '../../constants/problem-constants';
 import * as problemAction from '../../actions/problem';
+import Spinner from '../../components/spinner/spinner';
 import Table from '../../components/table/table';
 import './style/problems.css';
-import Spinner from '../../components/spinner/spinner';
-import { HEADERS_TABLE } from '../../constants/problem-constants';
 
-class Problems extends Component {
+class ProblemCollection extends Component {
   render () {
     if (this.props.isLoading) {
       return <Spinner />;
@@ -14,6 +16,12 @@ class Problems extends Component {
 
     return (
       <div className='problems-container'>
+        <PageHeader>
+          Problems
+        </PageHeader>
+        <div id='add-problem-div'>
+          <Button bsStyle='primary' href={URLS.addProblem}>Add Problem</Button>
+        </div>
         <Table
           headers={HEADERS_TABLE}
           data={this.props.problems}
@@ -40,4 +48,4 @@ const mapDispatchToProps = dispatch => (
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Problems);
+export default connect(mapStateToProps, mapDispatchToProps)(ProblemCollection);

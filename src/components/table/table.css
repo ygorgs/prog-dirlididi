@@ -1,5 +1,5 @@
 .react-bs-container-header {
-  border-collapse: collapse;
+  border-radius: 3px;
   color: #fefefe;
   background-color: #375a7f;
 }
