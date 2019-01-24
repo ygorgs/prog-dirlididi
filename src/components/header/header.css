@@ -1,36 +1,36 @@
 .header {
-    text-align: center;
-    padding: 100px 0;
-    color: white;
+  text-align: center;
+  padding: 100px 0;
+  color: white;
 }
 
-.header-title{
-    font-size: 40px;
-    line-height: 40px;
+.header-title {
+  font-size: 40px;
+  line-height: 40px;
 }
 
 .header-title > span > em {
-    font-style: italic;
-    font-family: Droid Serif,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-weight: bold;
+  font-style: italic;
+  font-family: Droid Serif, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
-.header-body > span{
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 75px;
-    box-sizing: border-box;
-    text-transform: uppercase!important;
-    font-style: italic;
-    margin-bottom: 50px;
-    font-family: Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
+.header-body > span {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 75px;
+  box-sizing: border-box;
+  text-transform: uppercase !important;
+  font-style: italic;
+  margin-bottom: 50px;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .btn {
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: uppercase!important;
-    border: 1px solid transparent;
-    padding: 20px 40px;
-    font-family: Montserrat,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase !important;
+  border: 1px solid transparent;
+  padding: 20px 40px;
+  font-family: Montserrat, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
