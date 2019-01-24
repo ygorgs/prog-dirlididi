@@ -1,4 +1,4 @@
-import * as actionTypes from '../actions/actions';
+import { FETCH_COURSES } from '../actions/actions';
 
 const initialState = {
   courses: [],
@@ -8,11 +8,11 @@ const initialState = {
 
 const CourseReducer = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.GET_COURSES:
+    case FETCH_COURSES:
       return {
         error: null,
         isLoading: false,
-        cources: action.courses
+        courses: action.courses
       };
     default: return state;
   }

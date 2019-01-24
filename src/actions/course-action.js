@@ -1,14 +1,10 @@
-import * as action from './actions';
+import { FETCH_COURSES } from './actions';
 import { fetchGet } from '../shared/utility';
 
-export const getCourses = () => {
+export const fetchCourses = () => {
   return dispatch => {
-    fetchGet('/course/')
-      .then(courses => {
-        dispatch({ type: action.GET_COURSES, courses: courses });
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    fetchGet('/course')
+      .then(courses => dispatch({ type: FETCH_COURSES, courses: courses }))
+      .catch(error => console.log(error));
   };
 };

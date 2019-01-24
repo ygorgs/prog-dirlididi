@@ -4,28 +4,25 @@ import Table from '../../components/table/table';
 import * as courseAction from '../../actions/course-action';
 import './style/courses.css';
 import Spinner from '../../components/spinner/spinner';
+import { HEADERS_TABLE } from '../../constants/course-constants';
 
 class Courses extends Component {
-  HEADERS_TABLE = {
-    name: 'Course',
-    users: 'Users',
-    owner: 'Owner',
-    date: 'Created at',
-    enrolled: 'Enrolled',
-    actions: 'Actions' // check how we're going to deal with solving
-  };
-
   componentDidMount () {
-    this.props.onInitCourses();
+    this.props.onFetchCourses();
   }
 
   render () {
-    const table = (this.props.isLoading) ? <Spinner />
-      : <Table headers={this.HEADERS_TABLE} data={this.props.courses} />;
+    // TODO It's necessary identify the user logged to se if he is a course member
+    const dataValues = this.props.courses.map(course => {
+      course.members = course.members.length;
+      return course;
+    });
+    const containerData = (this.props.isLoading) ? <Spinner />
+      : <Table headers={HEADERS_TABLE} data={dataValues} />;
 
     return (
       <div className='course-container'>
-        {table}
+        {containerData}
       </div>
     );
   }
@@ -40,7 +37,7 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = dispatch => (
   {
-    onInitCourses: () => dispatch(courseAction.getCourses())
+    onFetchCourses: () => dispatch(courseAction.fetchCourses())
   }
 );
 
