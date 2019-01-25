@@ -1,0 +1,81 @@
+.form-control-field {
+  width: 40%;
+}
+
+#form-control-description {
+  height: 200px;
+}
+
+#tag-name {
+  width: 80%;
+  border-radius: 3px;
+  margin-top: 1%;
+}
+
+#textarea-input {
+  width: 20%;
+  height: 34.7px;
+  border-radius: 3px;
+  margin-top: 1%;
+}
+
+#add-tag-btn {
+  margin-top: 1%;
+  position: inherit;
+  background-color: #ddd;
+}
+
+#remove-tag-btn {
+  margin-top: 1%;
+  margin-left: 2%;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+}
+
+#add-text-area-btn {
+  margin-top: 1%;
+  padding: 5.8px 13px 6px 13px;
+  position: inherit;
+  background-color: #ddd;
+}
+
+#remove-textarea-btn {
+  margin-top: 1%;
+  margin-left: 0.5%;
+  padding: 3.7px 13px 4px;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+}
+
+#add-tag-btn,
+#remove-tag-btn,
+#add-textarea-btn,
+#remove-textarea-btn {
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 5.8px;
+  padding-bottom: 5.8px;
+}
+
+#remove-tag-btn:hover,
+#remove-textarea-btn:hover {
+  background-color: #1e496d;
+  border-color: #1e496d;
+  color: #fff;
+}
+
+.button-submit {
+  margin-bottom: 2%;
+  padding: 8px 15px;
+  border-radius: 3px;
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.button-submit:hover {
+  background-color: #1e496d;
+  border-color: #1e496d;
+  color: #fff;
+}
