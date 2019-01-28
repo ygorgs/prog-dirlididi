@@ -12,6 +12,19 @@ const options = {
 };
 
 class Table extends Component {
+  getSelectRowProps (selectRow) {
+    if (selectRow) {
+      console.log(this.props.selectedItems);
+      return {
+        mode: 'checkbox',
+        clickToSelect: true,
+        bgColor: '#5bc0de',
+        selected: this.props.selectedItems
+      };
+    }
+    return false;
+  }
+
   render () {
     const headers = this.props.headers;
     const tableHeaderList = Object.keys(headers).map((header) => {
@@ -22,20 +35,23 @@ class Table extends Component {
           isKey={header === this.props.useAsKey}
           width={headers[header].width}
           dataAlign='center'>
-          { headers[header].label }
+          {headers[header].label}
         </TableHeaderColumn>
       );
     });
 
+    const selectRowProps = this.getSelectRowProps(this.props.selectRow);
+
     return (
       <div>
-        <BootstrapTable
+        <BootstrapTable ref='table'
+          selectRow={selectRowProps}
           data={this.props.data}
           options={options}
           search
           pagination
           hover>
-          { tableHeaderList }
+          {tableHeaderList}
         </BootstrapTable>
       </div>
     );

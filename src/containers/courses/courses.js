@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Table from '../../components/table/table';
-import * as courseAction from '../../actions/course-action';
+import { fetchCourses } from '../../actions/course-action';
 import './style/courses.css';
 import Spinner from '../../components/spinner/spinner';
 import { HEADERS_TABLE } from '../../constants/course-constants';
@@ -32,7 +32,7 @@ const mapStateToProps = state => (
 
 const mapDispatchToProps = dispatch => (
   {
-    onFetchCourses: () => dispatch(courseAction.fetchCourses())
+    onFetchCourses: () => dispatch(fetchCourses())
   }
 );
 
