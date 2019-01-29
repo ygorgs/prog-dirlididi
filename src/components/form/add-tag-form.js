@@ -9,17 +9,17 @@ class AddTagForm extends Component {
       <FormGroup>
         <ControlLabel>Tags</ControlLabel>
         { this.props.tags.map((tag, index) => (
-          <div class='input-group mb-3'>
+          <div className='input-group mb-3' key={tag}>
             <input
               id='tag-name'
               type='text'
-              class='form-control'
+              className='form-control'
               placeholder={`Tag #${index + 1} name`}
               value={tag}
               onChange={this.props.handleTagChange(index)} />
             <Button
               id='remove-tag-btn'
-              class='btn btn-outline-secondary input-group-append'
+              className='btn btn-outline-secondary input-group-append'
               onClick={this.props.handleRemoveTag(index)}
             > {'-'} </Button>
           </div>
