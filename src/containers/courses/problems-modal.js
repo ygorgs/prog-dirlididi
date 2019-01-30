@@ -24,6 +24,7 @@ class ProblemsModal extends Component {
       if (selectedKeys.includes(problem.key)) {
         return problem;
       }
+      return false;
     });
     this.props.addProblems(problems);
     this.props.onHide();
@@ -37,7 +38,7 @@ class ProblemsModal extends Component {
     return (
       <Table
         ref='table'
-        selectedItems={this.props.selectedProblems}
+        selectedItems={this.props.selectedItems.map(item => item.key)}
         selectRow
         headers={this.HEADERS_TABLE}
         data={this.props.problems}
@@ -48,7 +49,8 @@ class ProblemsModal extends Component {
   render () {
     return (
       <Modal
-        {...this.props}
+        show={this.props.show}
+        onHide={this.props.onHide}
         bsSize='large'
         aria-labelledby='contained-modal-title-lg'>
         <Modal.Header>

@@ -14,7 +14,6 @@ const options = {
 class Table extends Component {
   getSelectRowProps (selectRow) {
     if (selectRow) {
-      console.log(this.props.selectedItems);
       return {
         mode: 'checkbox',
         clickToSelect: true,

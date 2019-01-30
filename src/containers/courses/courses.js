@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Table from '../../components/table/table';
+import { Button, PageHeader } from 'react-bootstrap';
 import { fetchCourses } from '../../actions/course-action';
 import './style/courses.css';
 import Spinner from '../../components/spinner/spinner';
@@ -17,6 +18,12 @@ class Courses extends Component {
 
     return (
       <div className='course-container'>
+        <PageHeader>
+          Courses
+        </PageHeader>
+        <div>
+          <Button bsStyle='primary' href='/addCourse'>Add Course</Button>
+        </div>
         {containerData}
       </div>
     );

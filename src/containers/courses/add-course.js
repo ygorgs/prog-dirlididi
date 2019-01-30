@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { PageHeader, ControlLabel, FormGroup, FormControl, HelpBlock, Button, ListGroup } from 'react-bootstrap';
 import { postCourse } from '../../actions/course-action';
 import ProblemsModal from './problems-modal';
+import CustomAlert from '../../components/alert/custom-alert';
 import './style/courses.css';
 
 class AddCourse extends Component {
@@ -11,7 +12,8 @@ class AddCourse extends Component {
     description: '',
     language: '',
     selectedProblems: [],
-    show: false
+    show: false,
+    showAlert: false
   }
 
   openProblemsModal = () => {
@@ -27,6 +29,7 @@ class AddCourse extends Component {
       if (problem.key !== item.key) {
         return problem;
       }
+      return false;
     });
 
     this.setState({ selectedProblems });
@@ -35,6 +38,10 @@ class AddCourse extends Component {
   handleModalHide = () => {
     this.setState({ show: false });
   }
+
+  handleShowAlert = () => {
+    this.setState({ showAlert: true });
+  };
 
   onFormSubmit = (event) => {
     event.preventDefault();
@@ -45,8 +52,8 @@ class AddCourse extends Component {
       language: this.state.language,
       problems: this.state.selectedProblems
     };
+    this.handleShowAlert();
     this.props.onCreateCourse(course);
-    // this.handleShowAlert();
   }
 
   renderProblemModal () {
@@ -55,10 +62,20 @@ class AddCourse extends Component {
     }
   }
 
+  renderShowAlert () {
+    if (this.state.showAlert) {
+      return <CustomAlert showAlert={this.state.showAlert} />;
+    }
+  }
+
   renderProblems () {
+    if (this.state.selectedProblems.length === 0) {
+      return <div className='form-group'>There is no problems added</div>;
+    }
+
     const itens = this.state.selectedProblems.map((problem) => {
       return (
-        <li className='list-group-item' key={problem.id}>
+        <li className='list-group-item' key={problem.key}>
           <div className='item-list'>
             <h4 className='item-group-item-heading'>{problem.name}</h4>
             <p className='item-group-item-text'><b>key:</b> {problem.key}</p>
@@ -82,6 +99,7 @@ class AddCourse extends Component {
           <PageHeader>
             Create Course
           </PageHeader>
+          {this.renderShowAlert()}
           <div>
             <form onSubmit={this.onFormSubmit}>
               <FieldGroup
@@ -90,6 +108,7 @@ class AddCourse extends Component {
                 type='text'
                 label='Name'
                 placeholder='Enter the course name'
+                required
                 onChange={(e) => this.setState({ name: e.target.value })} />
               <FieldGroup
                 id='course-description'
@@ -133,10 +152,10 @@ function FieldGroup ({ id, label, help, ...props }) {
   );
 }
 
-const mapStateToProps = (state) => {
-  // console.log(state);
-  //  return { course: state.courseReducer.course };
-};
+// const mapStateToProps = (state) => {
+// console.log(state);
+//  return { course: state.courseReducer.course };
+// };
 
 const mapDispatchToProps = dispatch => (
   {
@@ -144,4 +163,4 @@ const mapDispatchToProps = dispatch => (
   }
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddCourse);
+export default connect(null, mapDispatchToProps)(AddCourse);
