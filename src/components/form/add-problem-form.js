@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, ControlLabel, FormGroup, FormControl, HelpBlock } from 'react-bootstrap';
+import { Button, Col, ControlLabel, FormGroup, FormControl, HelpBlock, Row } from 'react-bootstrap';
+import ReactMarkdown from 'react-markdown';
 
 import AddTagForm from './add-tag-form';
 import AddTextAreaForm from './add-text-area-form';
@@ -14,14 +15,22 @@ class AddProblemForm extends Component {
           label='Name'
           placeholder='Enter name'
           onChange={this.props.handleProblemNameChange} />
-        <FieldGroup
-          className='form-control-field'
-          id='form-control-description'
-          componentClass='textarea'
-          type='text'
-          label='Description'
-          placeholder='Enter description'
-          onChange={this.props.handleProblemDescriptionChange} />
+        <Row>
+          <Col sm={6}>
+            <FieldGroup
+              className='form-control-field'
+              id='form-control-description'
+              componentClass='textarea'
+              type='text'
+              label='Description'
+              placeholder='Enter description'
+              onChange={this.props.handleProblemDescriptionChange} />
+          </Col>
+          <Col sm={6}>
+            <ReactMarkdown className='markdown-container' source={this.props.problemMarkdown} />
+          </Col>
+        </Row>
+
         <FieldGroup
           className='form-control-field'
           type='text'
