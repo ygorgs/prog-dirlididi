@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, PageHeader } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
-import { HEADERS_TABLE, URLS } from '../../constants/problem-constants';
+import { HEADERS_TABLE_CONFIG, TABLE_CONFIG, URLS } from '../../constants/problem-constants';
 import * as problemAction from '../../actions/problem';
 import Spinner from '../../components/spinner/spinner';
 import Table from '../../components/table/table';
@@ -23,9 +23,9 @@ class ProblemCollection extends Component {
           <Button bsStyle='primary' href={URLS.addProblem}>Add Problem</Button>
         </div>
         <Table
-          headers={HEADERS_TABLE}
-          data={this.props.problems}
-          useAsKey={'key'} />
+          tableConfig={TABLE_CONFIG}
+          headersConfig={HEADERS_TABLE_CONFIG}
+          data={this.props.problems} />
       </div>
     );
   }
