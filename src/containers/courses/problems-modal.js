@@ -5,14 +5,9 @@ import { initProblems } from '../../actions/problem';
 import Table from '../../components/table/table';
 import Spinner from '../../components/spinner/spinner';
 import './style/courses.css';
+import { HEADERS_TABLE_ADD_PROBLEM } from '../../constants/problem-constants';
 
 class ProblemsModal extends Component {
-  HEADERS_TABLE = {
-    key: { label: 'Key', width: '100' },
-    name: { label: 'Problem', width: '250' },
-    description: { label: 'Description' }
-  }
-
   componentDidMount () {
     this.props.onInitProblems();
   }
@@ -40,7 +35,7 @@ class ProblemsModal extends Component {
         ref='table'
         selectedItems={this.props.selectedItems.map(item => item.key)}
         selectRow
-        headers={this.HEADERS_TABLE}
+        headers={HEADERS_TABLE_ADD_PROBLEM}
         data={this.props.problems}
         useAsKey={'key'} />
     );

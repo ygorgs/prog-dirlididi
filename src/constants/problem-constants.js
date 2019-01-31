@@ -6,6 +6,12 @@ export const HEADERS_TABLE = {
   solved: { label: 'Solved', width: '80' } // check how we're going to deal with solving
 };
 
+export const HEADERS_TABLE_ADD_PROBLEM = {
+  key: { label: 'Key', width: '100' },
+  name: { label: 'Problem', width: '250' },
+  description: { label: 'Description' }
+};
+
 export const URLS = {
   addProblem: '/addProblem'
 };

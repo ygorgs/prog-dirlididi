@@ -1,6 +1,7 @@
 .course-container {
   margin: 5%;
 }
+
 .course-form {
   margin: 2% 5% 0 5%;
 }
@@ -20,7 +21,7 @@ textarea.form-control {
 }
 
 .button-add {
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .item-list {
@@ -28,7 +29,7 @@ textarea.form-control {
   margin-bottom: 1%;
 }
 
-.remove-button{
+.remove-button {
   position: absolute;
   right: 2%;
   top: 30%;
