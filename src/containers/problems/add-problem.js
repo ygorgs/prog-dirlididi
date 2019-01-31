@@ -119,6 +119,7 @@ class AddProblem extends Component {
           handleAddTest={this.handleAddTest}
           handleRemoveTest={this.handleRemoveTest}
           handleSubmit={this.handleSubmit}
+          problemMarkdown={this.state.description}
         />
       </div>
     );
