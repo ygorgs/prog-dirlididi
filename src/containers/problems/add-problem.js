@@ -25,8 +25,8 @@ class AddProblem extends Component {
     this.setState({ name: event.target.value });
   };
 
-  handleProblemDescriptionChange = event => {
-    this.setState({ description: event.target.value });
+  handleProblemDescriptionChange = newValue => {
+    this.setState({ description: newValue });
   };
 
   handleProblemTipChange = event => {
