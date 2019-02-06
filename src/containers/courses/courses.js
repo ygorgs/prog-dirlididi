@@ -4,7 +4,7 @@ import Table from '../../components/table/table';
 import * as courseAction from '../../actions/course-action';
 import './style/courses.css';
 import Spinner from '../../components/spinner/spinner';
-import { HEADERS_TABLE } from '../../constants/course-constants';
+import { TABLE_CONFIG, HEADERS_TABLE_CONFIG } from '../../constants/course-constants';
 
 class Courses extends Component {
   componentDidMount () {
@@ -13,7 +13,10 @@ class Courses extends Component {
 
   render () {
     const containerData = (this.props.isLoading) ? <Spinner />
-      : <Table headers={HEADERS_TABLE} data={this.props.courses} useAsKey={'id'} />;
+      : (<Table
+        data={this.props.courses}
+        headersConfig={HEADERS_TABLE_CONFIG}
+        tableConfig={TABLE_CONFIG} />);
 
     return (
       <div className='course-container'>
