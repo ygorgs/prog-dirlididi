@@ -12,6 +12,13 @@ export const TABLE_CONFIG = {
   hover: true
 };
 
+export const TEST_HEADERS_TABLE = {
+  description: { label: 'Description', width: '250' },
+  tip: { label: 'Tip', width: '100' },
+  input: { label: 'Input', width: '250' },
+  output: { label: 'Output', width: '250' }
+};
+
 export const URLS = {
   addProblem: '/addProblem'
 };

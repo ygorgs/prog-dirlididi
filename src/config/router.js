@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Welcome from '../containers/welcome/welcome';
 import Courses from '../containers/courses/courses';
 import ProblemCollection from '../containers/problems/problem-collection';
+import ProblemSummary from '../containers/problems/problem-summary';
 import AddProblem from '../containers/problems/add-problem';
 import Ide from '../components/ide/ide';
 import './router.css';
@@ -13,7 +14,8 @@ const Router = () => {
       <Switch>
         <Route exact path='/' component={Welcome} />
         <Route path='/courses' component={Courses} />
-        <Route path='/problems' component={ProblemCollection} />
+        <Route exact path='/problems' component={ProblemCollection} />
+        <Route path='/problems/:key' component={ProblemSummary} />
         <Route path='/ide' component={Ide} />
         <Route path='/addProblem' component={AddProblem} />
       </Switch>

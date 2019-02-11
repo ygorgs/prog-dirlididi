@@ -4,15 +4,12 @@ import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-a
 import './table.css';
 import PropTypes from 'prop-types';
 
-const options = {
-  onRowClick: function (row) {
-    // Add modal here
-    console.log('clicked');
-  }
-};
-
 class Table extends Component {
   render () {
+    const options = {
+      onRowClick: this.props.allowRedirect
+    };
+
     const tableHeaderList = this.props.headersConfig.map((headerConfig) => {
       return (
         <TableHeaderColumn
