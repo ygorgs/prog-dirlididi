@@ -4,13 +4,6 @@ import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-a
 import './table.css';
 import PropTypes from 'prop-types';
 
-const options = {
-  onRowClick: function (row) {
-    // Add modal here
-    console.log('clicked');
-  }
-};
-
 class Table extends Component {
   getSelectRowProps (selectRow) {
     if (selectRow) {
@@ -25,16 +18,17 @@ class Table extends Component {
   }
 
   render () {
-    const headers = this.props.headers;
-    const tableHeaderList = Object.keys(headers).map((header) => {
+    const options = {
+      onRowClick: this.props.allowRedirect
+    };
+
+    const tableHeaderList = this.props.headersConfig.map((headerConfig) => {
       return (
         <TableHeaderColumn
-          dataField={header}
-          key={header}
-          isKey={header === this.props.useAsKey}
-          width={headers[header].width}
+          {...headerConfig}
+          key={headerConfig.dataField}
           dataAlign='center'>
-          {headers[header].label}
+          { headerConfig.label }
         </TableHeaderColumn>
       );
     });
@@ -43,14 +37,14 @@ class Table extends Component {
 
     return (
       <div>
-        <BootstrapTable ref='table'
+        <BootstrapTable
+          ref='table'
           selectRow={selectRowProps}
+          {...this.props.tableConfig}
           data={this.props.data}
           options={options}
-          search
-          pagination
-          hover>
-          {tableHeaderList}
+        >
+          { tableHeaderList }
         </BootstrapTable>
       </div>
     );

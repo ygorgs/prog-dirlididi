@@ -1,5 +1,5 @@
-.form-control-field {
-  width: 40%;
+form {
+  max-width: 700px;
 }
 
 #form-control-description {
@@ -78,4 +78,18 @@
   background-color: #1e496d;
   border-color: #1e496d;
   color: #fff;
+}
+
+.code-editor,
+.markdown-container {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  height: 302px;
+  overflow-y: auto;
+}
+
+.markdown-container {
+  background-color: #eee;
+  margin-top: 24px;
+  padding: 6px 12px;
 }
